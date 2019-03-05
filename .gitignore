@@ -1,0 +1,4 @@
+/vagrant/.vagrant
+/_extra/packer/terraform/.terraform
+.DS_Store
+

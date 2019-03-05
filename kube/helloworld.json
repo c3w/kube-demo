@@ -1,0 +1,11 @@
+{
+  "type": "docker",
+  "image": "ubuntu",
+  "commit": true,
+  "changes": [
+    "VOLUME /test1 /test2",
+    "EXPOSE 80 443",
+    "LABEL version=1.0",
+    "CMD [\"nginx\", \"-g\", \"daemon off;\"]"
+  ]
+}

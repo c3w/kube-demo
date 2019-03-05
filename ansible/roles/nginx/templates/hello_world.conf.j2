@@ -1,0 +1,12 @@
+server { # Hello_World
+  listen       {{ nginx_port_http }};
+  root         '{{ html_dir }}/hello_world';
+}
+server { # Hello_World
+  listen       {{ nginx_port_https }} ssl;
+  root         '{{ html_dir }}/hello_world';
+  ssl_certificate     '{{ nginx_root }}/certs/certificate.crt';
+  ssl_certificate_key '{{ nginx_root }}/certs/privateKey.key';
+  ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+  ssl_ciphers         HIGH:!aNULL:!MD5;
+}

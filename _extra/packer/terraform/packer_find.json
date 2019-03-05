@@ -1,0 +1,11 @@
+data "aws_ami" "ec2-ami" {
+  filter {
+    name   = "state"
+    values = ["available"]
+  }
+  filter {
+    name   = "tag:Name"
+    values = ["truckingoffice"]
+  }
+  most_recent = true
+}

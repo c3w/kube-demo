@@ -1,0 +1,12 @@
+---
+
+# nginx
+
+nginx_service: nginx_service
+nginx_port_http: 80
+nginx_port_https: 443
+html_dir: /var/www/html
+html_owner: www-data
+html_perms: 0755
+nginx_root: /etc/nginx
+secure_perms: 0700
