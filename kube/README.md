@@ -56,4 +56,6 @@ Transfer rate:          2705.67 [Kbytes/sec] received
 
 --
 
+further benchmarking should be done with load-bearing links, which requires a pod of nginx + modules (php, uwcgi, etc)
+
 {eof}
