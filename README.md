@@ -30,6 +30,10 @@ In this workflow, we use `packer` to build a `docker image` with pre-run `ansibl
 
 --
 
+#please see [kube/README.md](kube/README.md) for operations
+
+--
+
 **optional local testing of app on desktop**
 
    `cd vagrant/ && vagrant up --provision`
