@@ -36,7 +36,7 @@ nginx-helloworld-hpa   Deployment/nginx-deployment       0%/50%    3         10 
 
 ```
 NAME                   REFERENCE                     TARGETS   MINPODS   MAXPODS   REPLICAS   AGE
-nginx-helloworld-hpa   Deployment/nginx-deployment   94%/50%   3         10        3          44m
+nginx-helloworld-hpa   Deployment/nginx-deployment   92%/50%   3         10        5          48m
 ```
 
 . . . and it takes several minutes to scale back to minimum.
