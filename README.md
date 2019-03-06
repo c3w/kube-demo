@@ -1,7 +1,5 @@
-## LZ DEMO
+## KUBE-DEMO
 ### rev 20190306.1 [c3w@juicypop.net](mailto:c3w@juicypop.net)
-
-for **CTO, LZ** c/o rp
 
 #TERRAFORM
     develop . deploy . configure
