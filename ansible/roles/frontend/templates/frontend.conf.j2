@@ -1,0 +1,27 @@
+server { # Hello_World
+  listen       80;
+  location / {
+    proxy_pass http://backend;
+    health_check match=server_ok;
+  }
+}
+
+server { # Hello_World
+  listen       443 ssl;
+  root         '{{ html_dir }}/hello_world';
+  ssl_certificate     '{{ nginx_root }}/certs/certificate.crt';
+  ssl_certificate_key '{{ nginx_root }}/certs/privateKey.key';
+  ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+  ssl_ciphers         HIGH:!aNULL:!MD5;
+  location / {
+    proxy_pass http://backend;
+    health_check match=server_ok;
+  }
+}
+
+upstream backend{
+  server 127.0.0.3:8000;
+  server 127.0.0.3:8001;
+  server 192.168.0.1:8000;
+  server 192.168.0.1:8001;
+}

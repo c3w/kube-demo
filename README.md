@@ -1,4 +1,4 @@
-## Lab ZERO DEMO
+## LZ DEMO
 ### rev 20190305.1 [c3w@juicypop.net](mailto:c3w@juicypop.net)
 
 for **CTO, LZ** c/o rp

@@ -1,6 +1,13 @@
 ---
-- name: global_installs
-  hosts: all
+- name: frontend_installs
+  hosts: frontend
+  become: true
+  roles:
+    - { role: frontend }
+
+- name: backend_installs
+  hosts: backend
   become: true
   roles:
     - { role: nginx }
+  

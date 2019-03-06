@@ -1,0 +1,43 @@
+---
+- name: install_nginx
+  apt:
+    pkg: [nginx-light]
+    state: present
+
+- name: nginx_started
+  service:
+    name: nginx
+    state: started
+
+- name: html_tree
+  file:
+    path: "{{ html_dir }}"
+    state: directory
+    owner: "{{ html_owner }}"
+    group: "{{ html_owner }}"
+    mode: "{{ html_perms }}"
+
+- name: ssl_certificates_dir
+  file:
+    path: "{{ nginx_root }}/certs"
+    state: directory
+    owner: "root"
+    group: "root"
+    mode: "{{ secure_perms }}"
+
+- name: ssl_certificates
+  copy:
+    src: "files/certs"
+    dest: "{{ nginx_root }}"
+    owner: "root"
+    group: "root"
+    mode: "{{ secure_perms }}"
+
+
+- name: hello_world
+  copy:
+    src: "files/html/hello_world/"
+    dest: "{{ html_dir }}/hello_world"
+    owner: "{{ html_owner }}"
+    group: "{{ html_owner }}"
+    mode: "{{ html_perms }}"
