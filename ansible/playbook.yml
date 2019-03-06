@@ -1,13 +1,13 @@
 ---
 - name: frontend_installs
-  hosts: frontend
+  hosts: all
   become: true
   roles:
     - { role: frontend }
 
-- name: backend_installs
-  hosts: backend
-  become: true
-  roles:
-    - { role: nginx }
-  
+#- name: backend_installs
+#  hosts: backend
+#  become: true
+#  roles:
+#    - { role: nginx }
+#  

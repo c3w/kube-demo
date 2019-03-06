@@ -9,9 +9,9 @@
       "image": "ubuntu:16.04",
       "commit": "true",
       "changes": [
-        "VOLUME /test1 /test2",
+        "VOLUME /var/www/html",
         "EXPOSE 80 443",
-        "CMD [\"nginx\", \"-g\", \"daemon off;\"]"
+        "CMD [\"/usr/sbin/nginx\", \"-g\", \"daemon off;\"]"
       ],
       "run_command": [
         "-d",
@@ -46,8 +46,8 @@
     [
       {
         "type": "docker-tag",
-        "repository": "testdemo/demo",
-        "tag": "0.1"
+        "repository": "c3w/nginx-helloworld",
+        "tag": "0.4"
       }
     ]
   ]

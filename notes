@@ -1,5 +1,14 @@
 `ab` load - ext.
-minikube? and host networking
++ minikube? and host networking
 versioned api
 script with `ab`
 	-> bump-log/check-until-change->log/repeat
+
+cheatsheet
+38235  [2019-03-06 00:45:09] minikube start
+38236  [2019-03-06 00:47:55] kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.10 --port=8080
+38237  [2019-03-06 00:48:16] kubectl expose deployment hello-minikube --type=NodePort
+38238  [2019-03-06 00:48:42] kubectl get pod
+38239  [2019-03-06 00:49:01] curl $(minikube service hello-minikube --url)
+38240  [2019-03-06 00:49:24] curl http://192.168.99.103:8080/
+38241  [2019-03-06 00:49:40] kubectl delete services hello-minikube

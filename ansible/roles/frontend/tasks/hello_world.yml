@@ -1,6 +1,6 @@
 ---
 - name: nginx_config
-  template: src=hello_world.conf.j2 dest=/etc/nginx/sites-available/default
+  template: src=frontend.conf.j2 dest=/etc/nginx/sites-available/default
 - name: html_hello_world
   file:
     path: "{{ html_dir }}/hello_world"
