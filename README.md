@@ -1,5 +1,5 @@
 ## KUBE-DEMO
-### rev 20190306.1 [c3w@juicypop.net](mailto:c3w@juicypop.net)
+### rev 20190306.1
 
 #TERRAFORM
     develop . deploy . configure
