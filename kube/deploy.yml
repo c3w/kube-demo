@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx-helloworld
+        role: rolling-update
+    spec:
+      containers:
+      - name: nginx-helloworld
+        image: c3w/nginx-helloworld:${kVERSION}
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+  strategy:
+    type: RollingUpdate
+    rollingUp      maxSurge: 50%

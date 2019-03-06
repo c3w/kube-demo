@@ -1,4 +1,14 @@
 ---
+- name: install_php_fpm
+  apt:
+    pkg: [php-fpm]
+    state: present
+
+- name: fpm_started
+  service:
+    name: php7.0-fpm
+    state: started
+
 - name: install_nginx
   apt:
     pkg: [nginx-light]

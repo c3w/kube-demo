@@ -11,7 +11,7 @@
       "changes": [
         "VOLUME /var/www/html",
         "EXPOSE 80 443",
-        "CMD [\"/usr/sbin/nginx\", \"-g\", \"daemon off;\"]"
+        "CMD /usr/sbin/nginx; /bin/bash -c 'while [ 1 ]; do { /usr/bin/stress --cpu 2 --timeout 60; sleep 10; }; done'"
       ],
       "run_command": [
         "-d",
@@ -29,7 +29,7 @@
       "type": "shell",
       "inline": [
         "apt-get update",
-        "apt-get install python -yq"
+        "apt-get install -yq python stress"
       ]
     },
     {
@@ -47,7 +47,7 @@
       {
         "type": "docker-tag",
         "repository": "c3w/nginx-helloworld",
-        "tag": "0.4"
+        "tag": "0.7"
       }
     ]
   ]

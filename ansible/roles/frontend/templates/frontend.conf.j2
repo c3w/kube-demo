@@ -1,6 +1,12 @@
 server { # Hello_World
   listen       {{ nginx_port_http }};
   root         '{{ html_dir }}/hello_world';
+
+#  location ~ \.php$ {
+#    include snippets/fastcgi-php.conf;
+#    fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+#  }
+
 }
 server { # Hello_World
   listen       {{ nginx_port_https }} ssl;
