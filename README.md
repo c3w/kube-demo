@@ -38,6 +38,7 @@ In this workflow, we use `packer` to build a `docker image` with pre-run `ansibl
 
 --
 * [https://kubernetes.io/docs/tasks/configure-pod-container/](https://kubernetes.io/docs/tasks/configure-pod-container/)
+* [https://www.terraform.io/docs/providers/kubernetes/guides/getting-started.html](https://www.terraform.io/docs/providers/kubernetes/guides/getting-started.html)
 * [https://github.com/ansible/ansible-examples](https://github.com/ansible/ansible-examples)
 * [https://github.com/terraform-providers/terraform-provider-aws](https://github.com/terraform-providers/terraform-provider-aws)
 
